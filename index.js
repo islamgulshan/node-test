@@ -9,7 +9,7 @@ const userControllers= require('./controllers/userControllers');
 var jwt= require("jsonwebtoken");
 
 
-mongoose.connection.openUri('mongodb://localhost:27017/node-test', { useNewUrlParser:true});
+mongoose.connection.openUri('mongodb+srv://test:test@cluster0-bydjp.mongodb.net/test', { useNewUrlParser:true});
 mongoose.connection.on('connected',()=>{
 	console.log('coonected To db ');
 })
@@ -49,9 +49,11 @@ app.use('/', (req,res)=>{
 
 
 
-app.listen(port, () => {
-  console.log(`listening on port ${port}`);
-});
+// Heroku 
+app.listen(process.env.PORT || port , () => {
+   console.log(`listening on port ${port}`);
+ });
+
 
 
 // varify token
