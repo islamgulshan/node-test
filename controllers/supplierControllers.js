@@ -34,33 +34,17 @@ const get_all_suppler =( req,res)=>{
 	})
 	
 }
+ 
 
-const getReservationId =  (req,res) => {
-
-
-	reservationschema.findById(req.body.id, (err,reservationn)=>{
-		if(err){
-			res.send(err);
-		}
-		else{
-			res.status(200).json({
-				message: "get ones successfully",
-				reservationn
-			})
-		}
-	})
-}
-
-
-const deleteReservation=  (req,res) => {
-	reservationschema.findByIdAndRemove(req.params.id, (err,reservationn)=>{
+const deletesupplair=  (req,res) => {
+	supplierschema.findByIdAndRemove(req.params.id, (err,suppleir)=>{
 		if(err){
 			res.send(err);
 		}
 		else{
 			res.status(200).json({
 				message: "delete one   successfully",
-				reservationn
+				suppleir
 			})
 		}
 	})
@@ -86,8 +70,7 @@ const deleteReservation=  (req,res) => {
 
 module.exports={
 	addsuppler,
-	get_all_suppler,
-	getReservationId,
-	deleteReservation,
+	deletesupplair,
+	get_all_suppler, 
 	updatsuppleir
 }
