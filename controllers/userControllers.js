@@ -30,7 +30,7 @@ var jwt= require("jsonwebtoken");
 							})
 						}else{
 							res.status(200).json({
-								message: "Login Successfully",
+								 
 								token,user
 							})
 						}
