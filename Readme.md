@@ -77,7 +77,7 @@ https://boiling-anchorage-33456.herokuapp.com/api/updatsuppleir
 	"id":"5d7f8b532419ca001757ac93",
 	 "contact":{
 		 	"company_name": "iAgility",
-        	"email": "salmanbukahri37sss@gmail.com",
+        	"email": "islam@gmail.com",
         	"name": "4 Bed Rooms",
         	"phone": "0333333",
         	"status_user": "Active"
