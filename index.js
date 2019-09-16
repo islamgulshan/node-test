@@ -8,20 +8,20 @@ const userControllers= require('./controllers/userControllers');
 
 var jwt= require("jsonwebtoken");
 
- 
+
 mongoose.connection.openUri('mongodb+srv://test:test@cluster0-bydjp.mongodb.net/test', { useNewUrlParser:true});
 mongoose.connection.on('connected',()=>{
 	console.log('coonected To db ');
 })
  
-/*
+ /*
 mongoose.connection.openUri('mongodb://localhost:27017/supplier', { useNewUrlParser:true});
 
 mongoose.connection.on('connected',()=>{
 	console.log('coonected To db ');
-})
+})*/
 
-*/
+
 
 mongoose.connection.on('error',(err)=>{
 	if(err){
