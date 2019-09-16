@@ -14,32 +14,28 @@ var jwt= require("jsonwebtoken");
 		else{  
 			
 			user.comparePassword(req.body.password, function(err, isMatch) {
-				if(err){
-					res.status(500).json({
-						message: "error",
-						err
-					})
-				}else{
-
-					jwt.sign({user},'secretkey',{ expiresIn:'3000s'},(err,token)=>{
-						 
-						if(err){
-							res.status(500).json({
-								message: "error",
-								err
-							})
-						}else{
-							res.status(200).json({
-								 
-								token,user
-							})
+				  if (isMatch) {
+					jwt.sign(
+					  { result },
+					  "secretKey",
+					  { expiresIn: "30000s" },
+					  (err, token) => {
+						if (err) {
+						  err.status(403).send(err);
+						} else {
+						  res.status(200).json({
+							result,
+							token
+						  });
 						}
-						
-
-
-					})
-					 
-				}
+					  }
+					);
+				  } else {
+					res.json({
+					  msg: "Username/Password is not correct",
+					  isMatch: isMatch
+					});
+				  }
 				
 			});
 	
