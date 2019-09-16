@@ -67,16 +67,15 @@ const deleteReservation=  (req,res) => {
 }
 
 
- const updatReservation = (req,res)=>{
-	console.log(req.body);
-	reservationschema.findByIdAndUpdate(req.body.id, req.body.contact,{ new :true}, (err,reservationn)=>{
+ const updatsuppleir = (req,res)=>{
+	 
+	supplierschema.findByIdAndUpdate(req.body.id, req.body.contact,{ new :true}, (err,supper)=>{
 		if(err){
 			res.send(err);
 		}
 		else{
-			res.status(200).json({
-				message: "update  save successfully",
-				reservationn
+			res.status(200).json({ 
+				supper
 			})
 		}
 	})
@@ -90,5 +89,5 @@ module.exports={
 	get_all_suppler,
 	getReservationId,
 	deleteReservation,
-	updatReservation,
+	updatsuppleir
 }

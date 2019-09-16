@@ -12,6 +12,8 @@ router.post('/addsuppler',supplierControllers.addsuppler);
 
 router.get('/get_all_suppler',supplierControllers.get_all_suppler);
 
+router.put("/updatsuppleir",reservationControllers.updatsuppleir);
+
 
 router.post('/addreservation',reservationControllers.addreservation);
 router.get('/get_all_reservation',reservationControllers.get_all_reservation);
