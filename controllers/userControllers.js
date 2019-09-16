@@ -16,7 +16,7 @@ var jwt= require("jsonwebtoken");
 			user.comparePassword(req.body.password, function(err, isMatch) {
 				  if (isMatch) {
 					jwt.sign(
-					  { result },
+					  { user },
 					  "secretKey",
 					  { expiresIn: "30000s" },
 					  (err, token) => {
@@ -24,7 +24,7 @@ var jwt= require("jsonwebtoken");
 						  err.status(403).send(err);
 						} else {
 						  res.status(200).json({
-							result,
+							user,
 							token
 						  });
 						}
