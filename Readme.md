@@ -1,5 +1,5 @@
 
-# Enventory System
+# Inventory System
 
 
  
@@ -44,7 +44,7 @@ https://boiling-anchorage-33456.herokuapp.com/api/addsuppler
  https://boiling-anchorage-33456.herokuapp.com/api/get_all_suppler
 
 
-# Gelete Supplier 
+# Delete Supplier 
 
 ##  Get Id  and pass ID and Get paramter
 
