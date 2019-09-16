@@ -4,6 +4,7 @@ var jwt= require("jsonwebtoken");
 
 // save data 
  const login =( req,res)=>{
+	 console.log(req);
 	UserSchema.findOne({ email: req.body.email }, function(err, user) {
 		if(err){
 			res.status(500).json({
